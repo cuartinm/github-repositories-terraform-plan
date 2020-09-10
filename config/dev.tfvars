@@ -1,2 +1,2 @@
-github_token = ""
-github_organization = ""
+# github_token = ""
+# github_organization = ""
