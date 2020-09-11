@@ -10,7 +10,7 @@ resource "github_repository" "angular_template" {
   description    = "Repository Template for Angular Projects"
   default_branch = "master"
   is_template    = "true"
-  private        = false
+  visibility     = "public"
 }
 
 resource "github_repository" "spring_template" {
@@ -18,7 +18,7 @@ resource "github_repository" "spring_template" {
   description    = "Repository Template for Spring Projects"
   default_branch = "master"
   is_template    = "true"
-  private        = false
+  visibility     = "public"
 }
 
 # resource "github_repository" "from_template_repository" {
