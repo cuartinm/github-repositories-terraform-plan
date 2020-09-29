@@ -21,13 +21,14 @@ resource "github_repository" "spring_template" {
   visibility     = "public"
 }
 
-# resource "github_repository" "from_template_repository" {
-#   name           = "from-template-repository"
-#   description    = "Repository created from template"
-#   default_branch = "master"
-#   private        = false
-#   template {
-#     owner      = "${var.github_organization}"
-#     repository = "repository-template"
-#   }
-# }
+resource "github_repository" "from_template_repository" {
+  name           = "from-template-repository"
+  description    = "Repository created from template"
+  default_branch = "master"
+  visibility     = "private"
+
+  template {
+    owner      = "${var.github_organization}"
+    repository = "repository-template"
+  }
+}
