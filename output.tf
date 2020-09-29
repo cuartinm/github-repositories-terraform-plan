@@ -5,6 +5,6 @@
 
 
 output "repositories_names" {
-  value = "${github_repositories.data_repositories.full_names}"
+  value = data.github_repositories.data_repositories.full_names
   description = "The repositories full names"
 }
